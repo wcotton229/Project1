@@ -1,0 +1,213 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Signika', sans-serif;
+font-family: 'Damion', cursive; */
+
+/* Base Styling */
+
+body {
+    font-family: 'Signika', sans-serif;
+    font-weight: 300;
+    background-image: url("./../images/topography_neutral.svg");
+    background-size: 33%;
+}
+h4 {
+    font-family: 'Damion', cursive;
+    color:  #f8f7f1;
+    font-size: 36px;
+}
+h1 {
+    color: #f8f7f1;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+p {
+    font-size: 20px;
+    color:#f8f7f1;
+    font-family: 'Signika', sans-serif;
+    font-weight: 600;
+}
+
+.logo {
+    width: 250px;
+}
+
+#map {
+    height: 400px;
+    width:400px;
+    margin: auto;
+    padding-top:20%;
+    /* float: right; */
+}
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("./../images/topography_teal.svg");
+    /* background-color:#196266; */
+    background-size: 60%;
+    /* background-image: url("./../images/topography-01.svg"), linear-gradient(to bottom, #49beaa 0%, #196266 100%); */
+}
+
+
+nav {
+    width: 100%;
+}
+
+#footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   background-color:#3f4c49;
+   margin-top: 100px;
+}
+
+.foot {
+    text-align: center;
+    color: #49beaa;
+}
+
+.yellowbutton {
+    background-color: #fdc046;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px; 
+    color: #014256;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.yellowbutton:hover {
+    background-color: #ffdd55;
+}
+
+.navybutton {
+    background-color: #014256;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px; 
+    color: #f8f7f1;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Signika', sans-serif;
+    font-weight: 600;
+}
+
+.navybutton:hover {
+    background-color: #ffdd55;
+    color: #014256;
+}
+
+#signin-form {
+    background:rgba(162, 255, 239, .8);
+    padding:30px;
+    color:#014256;
+    font-family: 'Anton', sans-serif;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+
+#emailHelp {
+    float:right;
+    font-size:12px;
+    color:#014256;
+}
+
+.form-control {
+    color: #49beaa;
+    background-color: #f8f7f1;
+}
+
+
+  
+.bg-offwhite {
+    background-color: #f8f7f1;
+}
+
+
+.text-grey {
+    color: #aec3c9;
+}
+
+#navigation {
+    /* background-image: url("./../images/topography-01.svg"), linear-gradient(#fcb420, #fede55);
+    background-size: 100%; */
+    background-color:#f8f7f1;
+    width:100%;
+}
+#signintext {
+    text-align: center;
+}
+
+#bodycontent {
+    margin-bottom: 75px;
+}
+
+.searchresults {
+    margin-bottom: 75px;
+}
+
+#returnSearch {
+    margin-bottom: 150px;
+}
+
+#heroimage {
+    height: 350px;
+    background-image: url("https://images.pexels.com/photos/34511/norway-mountain-sky-blue.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.hikeimage {
+    width: 100%;
+
+
+}
+
+.list-group-item {
+    background-color: transparent;
+    font-family: anton;
+    color: #f8f7f1;
+    border-color: #f8f7f1;
+    font-size:18px;
+}
+
+#rating {
+    color:#ffdd55;
+    margin-top: 0;
+}
+
+.card {
+    background:rgba(162, 255, 239, .8);
+}
+
+.card-title {
+    font-family: 'Anton', sans-serif;
+    color:#014256;
+}
+
+.text-muted {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.card-text {
+    color:#014256;
+}
+
+#hikestats {
+    padding-left:0;
+}

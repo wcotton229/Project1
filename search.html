@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!--custom styled CSS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jquery reference-->
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCy9eM2c0RKkQkB3TTINPHmIX9BajI_Gt8",
+            authDomain: "hikingapp-eb47b.firebaseapp.com",
+            databaseURL: "https://hikingapp-eb47b.firebaseio.com",
+            projectId: "hikingapp-eb47b",
+            storageBucket: "hikingapp-eb47b.appspot.com",
+            messagingSenderId: "768321299488"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                console.log(firebaseUser);
+            } else {
+    
+                console.log("not logged in");
+                // document.location.href = document.location.hostname;
+            }
+        });</script>
+    <!--firebase reference-->
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Damion|Signika:600" rel="stylesheet">
+    <title>Hiking App</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container-fluid px-0 mb-5 bg-offwhite">
+        <nav class="navbar navbar-expand-sm navbar-light bg-offwhite container">
+            <div class="mr-auto">
+                <a class="navbar-brand logo" href="signin.html">
+                    <img src="./assets/images/takeahike-logo-06.svg">
+                </a>
+            </div>
+            <div class="" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item pr-3">
+                        <button type="submit" id="logout" class="btn yellowbutton px-4">Log-out</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- body content -->
+    <div class="container">
+        <div class="row justify-content-center" id="signintext">
+            <div class="col-8">
+                <h4>find-a-hike</h4>
+                <h1>Trail Search</h1>
+                <p>Help us find your next hike and fill out the form below.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="bodycontent">
+            <div class="col-8">
+                <form id="signin-form">
+                    <div class="form-group pb-3">
+                        <label for="city">City Name</label>
+                        <input type="city" class="form-control" id="city" placeholder="Enter city here">
+                    </div>
+                    <div class="form-group pb-3">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Deleware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                            <option>Louisiana</option>
+                            <option>Maine</option>
+                            <option>Maryland</option>
+                            <option>Massachusetts</option>
+                            <option>Michigan</option>
+                            <option>Minnesota</option>
+                            <option>Mississippi</option>
+                            <option>Missouri</option>
+                            <option>Montana</option>
+                            <option>Nebraska</option>
+                            <option>Nevada</option>
+                            <option>New Hampshire</option>
+                            <option>New Jersey</option>
+                            <option>New Mexico</option>
+                            <option>New York</option>
+                            <option>North Carolina</option>
+                            <option>North Dakota</option>
+                            <option>Ohio</option>
+                            <option>Oklahoma</option>
+                            <option>Oregon</option>
+                            <option>Pennsylvania</option>
+                            <option>Rhode Island</option>
+                            <option>South Carolina</option>
+                            <option>South Dakota</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Utah</option>
+                            <option>Vermont</option>
+                            <option>Virginia</option>
+                            <option>Washington</option>
+                            <option>West Virginia</option>
+                            <option>Wisconsin</option>
+                            <option>Wyoming</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="searchtrails" class="btn px-5 navybutton">Search Trails</button>
+                    <button type="submit" id="newsearch" class="btn px-5 navybutton">New Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center searchresults">
+            <div class="col-md-12">
+                <div class="card-deck" id="bodyresults">
+                    <div class="card" id="trail1"></div>
+                    <div class="card" id="trail2"></div>
+                    <div class="card" id="trail3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer fixed-bottom">
+        <div class="card-footer text-muted" id="footer">
+            <div class=foot>&copy;2018 WAAG TECHNOLOGY AND DESIGN GROUP</div>
+        </div>
+    </div>
+
+    <!-- google api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqySJr47rVKYnN2R2UvMM4YDKlRP691c&libraries=places" async
+        defer></script>
+    <script src="./assets/javascript/app.js"></script>
+
+</body>
+
+</html>
