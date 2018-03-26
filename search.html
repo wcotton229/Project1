@@ -20,29 +20,7 @@
     <!--custom styled CSS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--jquery reference-->
-
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCy9eM2c0RKkQkB3TTINPHmIX9BajI_Gt8",
-            authDomain: "hikingapp-eb47b.firebaseapp.com",
-            databaseURL: "https://hikingapp-eb47b.firebaseio.com",
-            projectId: "hikingapp-eb47b",
-            storageBucket: "hikingapp-eb47b.appspot.com",
-            messagingSenderId: "768321299488"
-        };
-        firebase.initializeApp(config);
-    </script>
-
-    <script>
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser) {
-                console.log(firebaseUser);
-            } else {
-                console.log("not logged in");
-            }
-        });</script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <!--firebase reference-->
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Anton|Damion|Signika:600" rel="stylesheet">
